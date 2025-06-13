@@ -1,6 +1,9 @@
 //com.objetos es el "package" de nuestras clases (proyectopoo/src/com/objetos)
 //La carpeta bin (binarios, generados por la maquina virtual de Java) NO DEBERIA ESTAR EN GIT (gitignore)
 import com.objetos.Prueba;
+
+import java.lang.StackWalker.Option;
+
 import com.objetos.Persona;
 
 //las clases siempre seran con mayúsculas (App)
@@ -24,7 +27,7 @@ public class App {
         //por esto el método debe ir con try/catch (intenta setearlo y lanza error en la exception contemplada)
         try {
             personaje.setEdad(30); 
-        } catch (Exception e) {
+        } catch (Exception e) {//definimos la Exception con nombre e
             // Un catch nunca estará vacío
             System.out.println("ERROR: " + e.getMessage());
         } finally{
@@ -33,6 +36,22 @@ public class App {
             //ejemplo una conexion a BBDD y si pasa algo por el camino, la conexion siempre la cerraremos en finally
         }
 
+        
+        
         System.out.println("OBJETO PERSONAJE(creado con la clase Persona.java): \nNombre y apellido: " + personaje.getNombre() + " " + personaje.getApellido() + "\nEdad: " +  personaje.getEdad());
+        
+        
+        //metodo  de la clase Persona
+        personaje.setGenero(null);;//ver por qué no devuelve elementos del enum como opciones
+        System.out.println(personaje.getGenero());//no está bien
+    
+        System.out.println(personaje.getNombreCompleto());
+        
+        System.out.println(personaje.getNombreCompleto(3));//Polimorfismo de getNombreCompleto
+        
+        System.out.println(personaje.getNombreCompleto(true));
+
+        personaje.setDni(12345678);
+        System.out.println(personaje.getDni() + "" + personaje.getDniLetra());
     }
 }
