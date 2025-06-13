@@ -43,7 +43,7 @@ public class App {
         
         
         //metodo  de la clase Persona
-        personaje.setGenero(tipoGenero.MASCULINO);//acceso a Enumcon Enum.elemento
+        personaje.setGenero(tipoGenero.MASCULINO);//acceso a Enum con: Enum.elemento
         System.out.println("Genero: " + personaje.getGenero());
     
         System.out.println(personaje.getNombreCompleto());
