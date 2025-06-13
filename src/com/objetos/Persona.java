@@ -11,11 +11,9 @@ public class Persona {
 
     public enum tipoGenero{FEMENINO,MASCULINO,OTROS};
     private int dni;
-   
 
     //podemos generar los Getter  y Setter con CodeGenerator (extensionVsCode)
-    //click derecho y codegenerator for Java/generate getter and setters
-    
+    //click derecho sobre nombre de la propiedad y codegenerator for Java/generate getter and setters
   
     // Por cada propiedad habra metodo Get (recuperar) y set opcionalmente(dar valor):
     public String getNombre(){
