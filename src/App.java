@@ -1,6 +1,7 @@
 //com.objetos es el "package" de nuestras clases (proyectopoo/src/com/objetos)
 //La carpeta bin (binarios, generados por la maquina virtual de Java) NO DEBERIA ESTAR EN GIT (gitignore)
 import com.objetos.Prueba;
+import com.objetos.Persona.tipoGenero;
 
 import java.lang.StackWalker.Option;
 
@@ -42,16 +43,16 @@ public class App {
         
         
         //metodo  de la clase Persona
-        personaje.setGenero(null);;//ver por qué no devuelve elementos del enum como opciones
-        System.out.println(personaje.getGenero());//no está bien
+        personaje.setGenero(tipoGenero.MASCULINO);//acceso a Enumcon Enum.elemento
+        System.out.println("Genero: " + personaje.getGenero());
     
         System.out.println(personaje.getNombreCompleto());
         
         System.out.println(personaje.getNombreCompleto(3));//Polimorfismo de getNombreCompleto
         
-        System.out.println(personaje.getNombreCompleto(true));
+        System.out.println(personaje.getNombreCompleto(true));//Polimorfismo de getNombreCompleto
 
         personaje.setDni(12345678);
-        System.out.println(personaje.getDni() + "" + personaje.getDniLetra());
+        System.out.println("DNI: " + personaje.getDni() + "" + personaje.getDniLetra());
     }
 }

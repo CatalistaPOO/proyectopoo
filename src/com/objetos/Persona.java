@@ -8,10 +8,8 @@ public class Persona {
     private String  apellido;
     private int edad;
     private tipoGenero genero;
-    public enum tipoGenero{
-        FEMENINO,MASCULINO,OTROS
-    }
-    Scanner teclado = new Scanner(System.in);
+
+    public enum tipoGenero{FEMENINO,MASCULINO,OTROS};
     private int dni;
    
 
@@ -50,11 +48,11 @@ public class Persona {
 
     
     //Getter y Setter, una vez definido el enum y la nueva prpiedad genero (al principio de la clase):
-    public tipoGenero getGenero() {
+    public tipoGenero getGenero(){
         return this.genero;
     }
 
-    public void setGenero(tipoGenero genero ) {
+    public void setGenero(tipoGenero genero ){
         this.genero = genero;
     }
 
