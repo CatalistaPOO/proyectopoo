@@ -59,10 +59,9 @@ public class Persona {
     
     public char getDniLetra(){
         String letrasDni = "TRWAGMYFPDXBNJZSQVHLCKET";
-
-            int resultado = (this.dni - (this.dni /23) * 23);
-            char letra = letrasDni.charAt (resultado);
-            return letra;
+        int resultado = (this.dni - (this.dni /23) * 23);
+        char letra = letrasDni.charAt (resultado);
+        return letra;
     }
 
     //METODO PARA DEVOLVER NOMBRE Y APELLIDO. Firma de metodo() para generar SOBRECARGA
