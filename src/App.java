@@ -17,40 +17,37 @@ public class App {
         //EJECUTAMOS UN METODO DE OTRA CLASE (PRUEBA)
         Prueba.saludar();
 
-        //CREAMOS UN NUEVO OBJETO(personaje) DE UNA CLASE (Persona)
+        //CREAMOS UN NUEVO OBJETO(personaje) DE UNA CLASE(Persona)
         Persona personaje = new Persona();
 
         System.out.println("-------------------------------------------");
 
         personaje.setNombre("Lucas"); 
         personaje.setApellido("Lopez");
-        //setEdad de la clase PERSONA, en su método contiene throws Exception y Exception en particular si es negativo
-        //por esto el método debe ir con try/catch (intenta setearlo y lanza error en la exception contemplada)
+        //setEdad de la clase PERSONA, en su método contiene throws Exception y Exception en particular si es negativo.
+        //por esto el método debe ir con try/catch (intenta setearlo y lanza error si falla dando la Exception contemplada)
         try {
             personaje.setEdad(30); 
         } catch (Exception e) {//definimos la Exception con nombre e
-            // Un catch nunca estará vacío
-            System.out.println("ERROR: " + e.getMessage());
+            // Un catch NUNCA estará vacío
+            System.out.println("ERROR: " + e.getMessage());//e(Exception) lanza un mensaje (getmessage) que hemos definido en la clase persona
         } finally{
             //finally siempre se ejecuta con indepenedencia de si hay Exception o no. Es opcional.
-            //Sirve para asegurar que se cumple un paso sí o sí a pesar del Exception.
+            //Sirve para asegurar que se cumple un paso sí o sí a pesar de producirse Exception.
             //ejemplo una conexion a BBDD y si pasa algo por el camino, la conexion siempre la cerraremos en finally
         }
 
-        
-        
         System.out.println("OBJETO PERSONAJE(creado con la clase Persona.java): \nNombre y apellido: " + personaje.getNombre() + " " + personaje.getApellido() + "\nEdad: " +  personaje.getEdad());
         
-        
-        //metodo  de la clase Persona
+        //metodos de la clase Persona
         personaje.setGenero(tipoGenero.MASCULINO);//acceso a Enum con: Enum.elemento
         System.out.println("Genero: " + personaje.getGenero());
     
         System.out.println(personaje.getNombreCompleto());
         
-        System.out.println(personaje.getNombreCompleto(3));//Polimorfismo de getNombreCompleto
+        System.out.println(personaje.getNombreCompleto(3));//Sobrecarga de getNombreCompleto
         
-        System.out.println(personaje.getNombreCompleto(true));//Polimorfismo de getNombreCompleto
+        System.out.println(personaje.getNombreCompleto(true));//Sobrecarga de getNombreCompleto
 
         personaje.setDni(12345678);
         System.out.println("DNI: " + personaje.getDni() + "" + personaje.getDniLetra());
