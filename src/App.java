@@ -1,5 +1,5 @@
-//com.objetos es el "package" de nuestras clases (proyectopoo/src/com/objetos)
-//La carpeta bin (binarios, generados por la maquina virtual de Java) NO DEBERIA ESTAR EN GIT (gitignore)
+//com.objetos funciona como "package" de nuestras clases (nombreDelProyecto/src/com/objetos)
+//La carpeta bin (binarios, generados por la maquina virtual de Java) NO DEBERIA ESTAR EN GIT (especificar en .gitignore)
 import com.objetos.Prueba;
 import com.objetos.Persona.tipoGenero;
 
@@ -39,16 +39,18 @@ public class App {
 
         System.out.println("OBJETO PERSONAJE(creado con la clase Persona.java): \nNombre y apellido: " + personaje.getNombre() + " " + personaje.getApellido() + "\nEdad: " +  personaje.getEdad());
         
-        //metodos de la clase Persona
-        personaje.setGenero(tipoGenero.MASCULINO);//acceso a Enum con: Enum.elemento
-        System.out.println("Genero: " + personaje.getGenero());
-    
+        //METODO FIRMA DE LA CLASE PERSONA Y METODOS CON SOBRECARGA
+        
         System.out.println(personaje.getNombreCompleto());
         
         System.out.println(personaje.getNombreCompleto(3));//Sobrecarga de getNombreCompleto
         
         System.out.println(personaje.getNombreCompleto(true));//Sobrecarga de getNombreCompleto
 
+        personaje.setGenero(tipoGenero.MASCULINO);//acceso a Enum con: Enum.elemento
+        System.out.println("Genero: " + personaje.getGenero());
+
+        //METODO QUE DEVUELVE UN DNI CON LETRA
         personaje.setDni(12345678);
         System.out.println("DNI: " + personaje.getDni() + "" + personaje.getDniLetra());
     }
