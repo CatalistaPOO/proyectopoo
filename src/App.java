@@ -115,8 +115,6 @@ public class App {
         Persona temp3 = empleados.get(3); //recupero becario con sus metodos Persona
         
         //Toda clase tiene un metodo que se llama GetClass()
-        //
-
         
     }
 }
